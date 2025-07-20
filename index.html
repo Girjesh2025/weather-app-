@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <div class="search-container">
+            <div class="dropdown-section">
+                <select id="countrySelect" class="select-style">
+                    <option value="">Select Country</option>
+                </select>
+                
+                <select id="citySelect" class="select-style" disabled>
+                    <option value="">Select City</option>
+                </select>
+            </div>
+
+            <div class="direct-search">
+                <input type="text" id="searchInput" placeholder="Or search city directly...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+
+        <div id="weatherInfo" class="weather-info hidden">
+            <div class="weather-header">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+                <h2 id="cityName"></h2>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <span id="temperature"></span>
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-cloud"></i>
+                    <span id="condition"></span>
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <span id="humidity"></span>
+                </div>
+                
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <span id="windSpeed"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
